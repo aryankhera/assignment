@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.App table{
+  max-width: 95vw;
+  width: 100%;
+  margin: auto;
+  border: #282c34;
+}
+
+.App th{
+  position: sticky;
+  top:0;
+  background-color: rgb(163, 163, 252);
+  color: rgb(54, 36, 14);
+}
