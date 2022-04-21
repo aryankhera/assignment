@@ -1,11 +1,10 @@
 import "./App.css";
-import Table from "./components/Table";
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <div className="App">
-      <h1>Delta exchange Assignment</h1>
-      <Table />
+      <Layout />
     </div>
   );
 }
