@@ -79,7 +79,6 @@ export default function ProductTable() {
         );
       };
       socket.onmessage = (event) => {
-        // console.log(JSON.parse(event.data));
         let data = JSON.parse(event.data);
         if ("symbol" in data && "mark_price" in data)
           setmarkPrice((prevmarkPrice) => {
@@ -99,12 +98,10 @@ export default function ProductTable() {
   }, [productData]);
 
   useEffect(() => {
-    console.log("Mounted");
     fetch(PRODUCTS_API, { signal })
       .then((resp) => resp.json())
       .then((data) => {
         let products = data["result"] || [];
-        console.log(data);
         setproductData(
           products.map((product) => {
             return {
