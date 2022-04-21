@@ -22,3 +22,20 @@ background: rgba(0,0,0,.25);
 -webkit-transition: color .2s ease;
 transition: color .2s ease;
 }
+.row-container div{
+  z-index: -1;
+}
+.row-container div:first-child{
+  position: sticky;
+  left:0;
+  z-index: 0;
+  background-color: white;
+  border-right: 1px solid black;
+}
+.react-fluid-table-header>div:first-child{
+  position: sticky;
+  left:0;
+  z-index: 3;
+  background-color: white;
+  border-right: 1px solid black;
+}

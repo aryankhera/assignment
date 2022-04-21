@@ -19,7 +19,7 @@ export default function ProductTable() {
     {
       key: "symbol",
       header: "Symbol",
-      // width: 200,
+      width: 200,
     },
     {
       key: "description",
@@ -29,12 +29,12 @@ export default function ProductTable() {
     {
       key: "underlying_assets",
       header: "Underlying Assets",
-      // width: 200,
+      width: 200,
     },
     {
       key: "mark_price",
       header: "Mark Price",
-      // width: 200,
+      width: 200,
     },
   ];
 
@@ -50,6 +50,7 @@ export default function ProductTable() {
     borderColor: "black",
     borderWidth: "0px 1px 1px 1px",
     overflow: "hidden",
+    textAlign: "left",
   };
   const [productData, setproductData] = useState([]);
   const [markPrice, setmarkPrice] = useState({});
@@ -83,7 +84,7 @@ export default function ProductTable() {
         if ("symbol" in data && "mark_price" in data)
           setmarkPrice((prevmarkPrice) => {
             let price = {};
-            price[data["symbol"]] = data["mark_price"];
+            price[data["symbol"]] = parseFloat(data["mark_price"]);
             return { ...prevmarkPrice, ...price };
           });
       };
