@@ -1,4 +1,7 @@
 ## Features implemented
+1. Windowed Scroll using react-fluid-table
+2. Get mark price using Websockets 
+3. Sticky header and first column
 
 ## Available Scripts
 
